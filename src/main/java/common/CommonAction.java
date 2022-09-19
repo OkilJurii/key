@@ -12,12 +12,18 @@ import static common.Config.PLATFORM_AND_BROWSER;
 public class CommonAction {
 
 
+
     private static WebDriver driver = null;
+
+    public static void setDriver(WebDriver driver) {
+        CommonAction.driver = driver;
+    }
 
     private CommonAction() {
     }
 
     public static WebDriver createDriver() {
+
         if (driver == null){
             switch (PLATFORM_AND_BROWSER) {
                 case "win_chrome":

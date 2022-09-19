@@ -16,16 +16,11 @@ public class BaseTest {
     public void baseSetup(){
          // BasePage basePage = new BasePage(driver);
          driver.get("https://qa-scooter.praktikum-services.ru/");
-
-
-
     }
 
    @After
    public void baseDown(){
    driver.quit();
+   CommonAction.setDriver(null);
    }
-
-
-
 }
